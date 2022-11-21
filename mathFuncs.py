@@ -6,9 +6,9 @@ def gcd(a, b):
     return (g, y, x-q*y)
 
 
-def generatePrime():
+def generatePrime(bits=45):
     import secrets
-    bigNum = secrets.randbits(45) 
+    bigNum = secrets.randbits(bits)*(10**2)
     bigNum = bigNum if bigNum % 2 != 0 else bigNum + 1
     if isPrime(bigNum):
         return bigNum
